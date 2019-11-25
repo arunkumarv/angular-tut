@@ -8,7 +8,7 @@ import { Title } from '@angular/platform-browser';
 })
 export class SidebarComponent implements OnInit {
 
-  @Input() sbTitle;
+  @Input('sb-title') sbTitle;
   constructor() { }
 
   ngOnInit() {
