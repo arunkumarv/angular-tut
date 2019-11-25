@@ -2,4 +2,8 @@
     {{ myTitle }}
 </h1>
 <p appHighlight>Highlight me!</p>
+<ul *ngIf="myList.length">
+    <li *ngFor="let elem of myList">{{elem}}</li>
+</ul>
+<button (click)="addToList()">Add</button>
 <button (click)="buttonClicked()">Click</button>
