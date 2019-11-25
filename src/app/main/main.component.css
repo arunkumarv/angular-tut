@@ -4,3 +4,9 @@
     width: 700px;
     float: left;
 }
+
+.title {
+    font-size: 28px;
+    color: #7c04a3;
+    text-decoration: underline;
+}
