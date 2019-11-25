@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'angular-tut';
   sidebarTitle: string = 'Sidebar title';
+
+  myEventHandler(event){
+    console.log( event )
+  }
 }

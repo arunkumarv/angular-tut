@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-main',
@@ -7,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
+  @Output('my-event') myEvent: EventEmitter<string> = new EventEmitter<string>();
   myTitle:string = 'Explorer';
   constructor() { }
 
   ngOnInit() {
+  }
+
+  buttonClicked(){
+    console.log('main.component button clicked')
+    this.myEvent.emit ( 'some data' );
   }
 
 }
