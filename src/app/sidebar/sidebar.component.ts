@@ -14,4 +14,8 @@ export class SidebarComponent implements OnInit {
   ngOnInit() {
   }
 
+  buttonClicked() {
+    console.log ('Notify button clicked');
+  }
+
 }
