@@ -1,4 +1,12 @@
 <h1 class="title">
     {{sbTitle}}
 </h1>
+<div *ngIf="status; else elseBlock">
+    Status is {{status}}. I am in a div with a structural directive.
+</div>
+<ng-template #elseBlock>
+    <div>
+        Status is {{status}}. I am on the else block.
+    </div>
+</ng-template>
 <button (click)="buttonClicked()">Notify</button>

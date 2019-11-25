@@ -9,13 +9,14 @@ import { Title } from '@angular/platform-browser';
 export class SidebarComponent implements OnInit {
 
   @Input('sb-title') sbTitle;
+  status: boolean = true;
   constructor() { }
 
   ngOnInit() {
   }
 
   buttonClicked() {
-    console.log ('Notify button clicked');
+   this.status = !this.status;
   }
 
 }
