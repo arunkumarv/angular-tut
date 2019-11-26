@@ -4,3 +4,10 @@
 <p *ngIf="searchQuery">
     Search results for {{searchQuery}}
 </p>
+<div *ngIf="results">
+    <div *ngFor="let entry of results" class="entry">
+        <h3>{{entry.name}}</h3>
+        <p>Capital: {{entry.capital}}</p>
+        <p>Population: {{entry.population}}</p>
+    </div>
+</div>
