@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, ElementRef, ViewChild, Input } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -13,6 +13,7 @@ export class MainComponent implements OnInit {
   myList = [];
   name:string = "Arun"
   @ViewChild('f') myForm;
+  @Input('seletec-item-title') selectedItemTitle:string;
 
   constructor() { }
 

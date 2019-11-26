@@ -1,5 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Title } from '@angular/platform-browser';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -10,6 +9,7 @@ export class SidebarComponent implements OnInit {
 
   @Input('sb-title') sbTitle;
   @Input('item-titles') itemTitles;
+  @Output() myEvent: EventEmitter<string> = new EventEmitter<string>();
   
   status: boolean = true;
   birthday = new Date(1988, 3, 15);
@@ -21,6 +21,11 @@ export class SidebarComponent implements OnInit {
 
   buttonClicked() {
    this.status = !this.status;
+  }
+
+  handleEvent(e){
+    console.log(e);
+    this.myEvent.emit(e);
   }
 
 }

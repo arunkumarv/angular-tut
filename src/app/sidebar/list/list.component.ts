@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-list',
@@ -8,9 +8,15 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ListComponent implements OnInit {
 
   @Input('item-titles') itemTitles;
+  @Output() myEvent: EventEmitter<string> = new EventEmitter<string>();
   constructor() { }
 
   ngOnInit() {
+  }
+
+  handleEvent(e){
+    console.log(e);
+    this.myEvent.emit(e);
   }
 
 }

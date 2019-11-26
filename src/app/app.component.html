@@ -1,2 +1,2 @@
-<app-main (my-event)="myEventHandler($event)"></app-main>
-<app-sidebar [sb-title]="sidebarTitle" [item-titles]="itemTitles"></app-sidebar>
+<app-main (my-event)="myEventHandler($event)" [seletec-item-title]="selectedItemTitle"></app-main>
+<app-sidebar [sb-title]="sidebarTitle" [item-titles]="itemTitles" (myEvent)="sidebarEventHandler($event)"></app-sidebar>

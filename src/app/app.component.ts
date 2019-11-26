@@ -10,7 +10,14 @@ export class AppComponent {
   sidebarTitle: string = 'Sidebar title';
   itemTitles: Array<string> = [ 'TitleOne', 'TitleTwo', 'TitleThree', 'TitleFour', 'TitleFive' ];
 
+  selectedItemTitle:string = null;
+
   myEventHandler(event){
     console.log( event )
   }
+
+  sidebarEventHandler(event){
+    this.selectedItemTitle = event;
+  }
+
 }

@@ -1,4 +1,4 @@
 <p>
     list works!
 </p>
-<app-item *ngFor="let t of itemTitles" [title]="t"></app-item>
+<app-item *ngFor="let t of itemTitles" [title]="t" (myEvent)="handleEvent($event)"></app-item>
