@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-item',
@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ItemComponent implements OnInit {
 
+  @Input() title;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  notifyMain(){
+    console.log(this.title)
   }
 
 }
