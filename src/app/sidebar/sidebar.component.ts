@@ -10,6 +10,8 @@ export class SidebarComponent implements OnInit {
 
   @Input('sb-title') sbTitle;
   status: boolean = true;
+  birthday = new Date(1988, 3, 15);
+  
   constructor() { }
 
   ngOnInit() {

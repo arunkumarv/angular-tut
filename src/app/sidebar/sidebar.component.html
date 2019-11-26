@@ -1,6 +1,7 @@
 <h1 class="title">
     {{sbTitle}}
 </h1>
+<p>The hero's birthday is {{ birthday | date }}</p>
 <div *ngIf="status; else elseBlock">
     Status is {{status}}. I am in a div with a structural directive.
 </div>
