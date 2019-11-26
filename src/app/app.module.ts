@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { HighlightDirective } from './utils/highlight';
+import { ExponentialStrengthPipe } from './utils/exponential-strength';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     SidebarComponent,
-    HighlightDirective
+    HighlightDirective,
+    ExponentialStrengthPipe
   ],
   imports: [
     BrowserModule,
