@@ -8,7 +8,7 @@
 <button (click)="addToList()">Add</button>
 <button (click)="buttonClicked()">Click</button>
 <hr>
-<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+<form (ngSubmit)="onSubmit()" #f="ngForm">
     <input ngModel name="username">
     <input ngModel name="email">
     <button>Login</button>

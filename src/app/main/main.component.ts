@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output, ElementRef } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, ElementRef, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -11,6 +11,8 @@ export class MainComponent implements OnInit {
   @Output('my-event') myEvent: EventEmitter<string> = new EventEmitter<string>();
   myTitle:string = 'Explorer';
   myList = [];
+  @ViewChild('f') myForm;
+
   constructor() { }
 
   ngOnInit() {
@@ -27,8 +29,9 @@ export class MainComponent implements OnInit {
   addToList(){
     this.myList.push( this.randomString() );  
   }
-  onSubmit( form: NgForm ) { 
-    console.log ( form ); 
+
+  onSubmit() { 
+    console.log ( this.myForm ); 
   }
 
 }
