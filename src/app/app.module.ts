@@ -7,6 +7,8 @@ import { MainComponent } from './main/main.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { HighlightDirective } from './utils/highlight';
 import { ExponentialStrengthPipe } from './utils/exponential-strength';
+import { ListComponent } from './sidebar/list/list.component';
+import { ItemComponent } from './sidebar/list/item/item.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { ExponentialStrengthPipe } from './utils/exponential-strength';
     MainComponent,
     SidebarComponent,
     HighlightDirective,
-    ExponentialStrengthPipe
+    ExponentialStrengthPipe,
+    ListComponent,
+    ItemComponent
   ],
   imports: [
     BrowserModule,
