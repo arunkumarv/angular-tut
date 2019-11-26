@@ -11,6 +11,7 @@ export class MainComponent implements OnInit {
   @Output('my-event') myEvent: EventEmitter<string> = new EventEmitter<string>();
   myTitle:string = 'Explorer';
   myList = [];
+  name:string = "Arun"
   @ViewChild('f') myForm;
 
   constructor() { }

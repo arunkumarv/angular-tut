@@ -13,3 +13,6 @@
     <input type="email" ngModel name="email" email>
     <button [disabled]="!f.valid">Login</button>
 </form>
+<h3>Two way binding</h3>
+<input type="text" [(ngModel)]="name" />
+<input type="text" [(ngModel)]="name" />
