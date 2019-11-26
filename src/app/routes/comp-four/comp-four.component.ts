@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-comp-four',
@@ -8,9 +8,13 @@ import { Router } from '@angular/router';
 })
 export class CompFourComponent implements OnInit {
 
-  constructor( private router: Router ) { }
+  searchQuery = null;
+  constructor( private router: Router, private activatedroute: ActivatedRoute ) { }
 
   ngOnInit() {
+    this.activatedroute.queryParams.subscribe (
+      params => this.searchQuery = params.q
+    )
   }
 
   search( q: string ){
