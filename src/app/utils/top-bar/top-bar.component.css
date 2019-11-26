@@ -1,0 +1,11 @@
+:host {
+    display: block;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.active {
+    background-color: yellow;
+    text-decoration: none;
+    color: green;
+}

@@ -15,6 +15,7 @@ import { CompTwoComponent } from './routes/comp-two/comp-two.component';
 import { CompThreeComponent } from './routes/comp-three/comp-three.component';
 import { CompFourComponent } from './routes/comp-four/comp-four.component';
 import { CompPageNotFoundComponent } from './routes/comp-page-not-found/comp-page-not-found.component';
+import { TopBarComponent } from './utils/top-bar/top-bar.component';
 
 const appRoutes: Routes = [
   { path: 'comp-one', component: CompOneComponent },
@@ -38,7 +39,8 @@ const appRoutes: Routes = [
     CompTwoComponent,
     CompThreeComponent,
     CompFourComponent,
-    CompPageNotFoundComponent
+    CompPageNotFoundComponent,
+    TopBarComponent
   ],
   imports: [
     BrowserModule,
