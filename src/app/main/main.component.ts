@@ -1,5 +1,6 @@
 import { Component, OnInit, EventEmitter, Output, ElementRef, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { AppService } from '../app.service';
 
 @Component({
   selector: 'app-main',
@@ -13,8 +14,11 @@ export class MainComponent implements OnInit {
   myList = [];
   name:string = "Arun"
   @ViewChild('f') myForm;
+  message: string = null;
 
-  constructor() { }
+  constructor( private appservice: AppService ) {
+    this.appservice.eventemitter.subscribe( (message: string) => this.message = message );
+  }
 
   ngOnInit() {
   }
