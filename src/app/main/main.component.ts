@@ -26,5 +26,8 @@ export class MainComponent implements OnInit {
   addToList(){
     this.myList.push( this.randomString() );  
   }
+  onSubmit() { 
+    console.log ('submitted'); 
+  }
 
 }

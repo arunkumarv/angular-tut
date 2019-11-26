@@ -7,3 +7,9 @@
 </ul>
 <button (click)="addToList()">Add</button>
 <button (click)="buttonClicked()">Click</button>
+<hr>
+<form (ngSubmit)="onSubmit()">
+    <input ngModel name="username">
+    <input ngModel name="email">
+    <button>Login</button>
+</form>
