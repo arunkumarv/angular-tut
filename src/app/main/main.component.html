@@ -9,7 +9,7 @@
 <button (click)="buttonClicked()">Click</button>
 <hr>
 <form (ngSubmit)="onSubmit()" #f="ngForm">
-    <input ngModel name="username">
-    <input ngModel name="email">
-    <button>Login</button>
+    <input type="text" ngModel name="username" required>
+    <input type="email" ngModel name="email" email>
+    <button [disabled]="!f.valid">Login</button>
 </form>
