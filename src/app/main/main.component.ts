@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-main',
@@ -26,8 +26,8 @@ export class MainComponent implements OnInit {
   addToList(){
     this.myList.push( this.randomString() );  
   }
-  onSubmit() { 
-    console.log ('submitted'); 
+  onSubmit( form: ElementRef ) { 
+    console.log (form); 
   }
 
 }
