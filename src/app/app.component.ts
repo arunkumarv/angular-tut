@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'angular-tut';
   sidebarTitle: string = 'Sidebar title';
+  itemTitles: Array<string> = [ 'TitleOne', 'TitleTwo', 'TitleThree', 'TitleFour', 'TitleFive' ];
 
   myEventHandler(event){
     console.log( event )

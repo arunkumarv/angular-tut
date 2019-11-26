@@ -1,7 +1,4 @@
 <p>
     list works!
 </p>
-<app-item></app-item>
-<app-item></app-item>
-<app-item></app-item>
-<app-item></app-item>
+<app-item *ngFor="let t of itemTitles" [title]="t"></app-item>
