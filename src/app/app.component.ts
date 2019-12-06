@@ -8,19 +8,33 @@ import { Observable } from 'rxjs';
 })
 export class AppComponent implements OnInit {
 
+   simpleObservable;
+
   ngOnInit(): void {
 
-    const simpleObservable = new Observable( (observer) => {
+  }
 
-      observer.next("hello");
+  initialise(){
 
-      observer.complete();
+    this.simpleObservable = new Observable( (observer) => {
+
+      setInterval ( () => {
+
+        observer.next( Math.random() );
+
+      }, 1000 );
 
     });
+  }
 
-    simpleObservable.subscribe( data => console.log (data) )
+  subscribe (){
+
+    this.simpleObservable.subscribe( data => console.log (data) );
 
   }
+
+
+
 
 
 }
