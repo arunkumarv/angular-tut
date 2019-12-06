@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +9,10 @@ import { Observable } from 'rxjs';
 export class AppComponent implements OnInit {
 
    simpleObservable;
+
+   subscription: Subscription;
+
+   data = null;
 
   ngOnInit(): void {
 
@@ -29,8 +33,16 @@ export class AppComponent implements OnInit {
 
   subscribe (){
 
-    this.simpleObservable.subscribe( data => console.log (data) );
+    this.subscription = this.simpleObservable.subscribe( data => {
+      console.log (data);
+       this.data = data;
+    });
 
+  }
+
+  unsubscribe(){
+
+    this.subscription.unsubscribe()
   }
 
 
